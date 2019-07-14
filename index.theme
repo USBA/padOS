@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=padOS
+Comment=iPadOS like desktop theme with iOS/iPadOS color palette. Based on ZorinOS GTK theme.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=padOS
+MetacityTheme=padOS
+IconTheme=padOS
+CursorTheme=Adwaita
+ButtonLayout=:minimize,maximize,close
