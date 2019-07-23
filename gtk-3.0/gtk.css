@@ -182,7 +182,7 @@ notebook > header > tabs > arrow:hover, button.sidebar-button:hover, button.titl
 
 notebook > header > tabs > arrow:hover:active, button.sidebar-button:hover:active, button.titlebutton:hover:active, button.flat:hover:active { transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
-button.titlebutton:hover, button:hover { color: #333333; outline-color: rgba(51, 51, 51, 0.3); border-color: transparent; background-color: #d6d6d6; background-image: none; -gtk-icon-effect: highlight; }
+button.titlebutton:hover, button:hover { color: #007aff; outline-color: rgba(51, 51, 51, 0.3); border-color: transparent; background-color: #d6d6d6; background-image: none; -gtk-icon-effect: highlight; }
 
 button.titlebutton:active, button.titlebutton:checked, button:active, button:checked { color: #ffffff; outline-color: rgba(51, 51, 51, 0.3); border-color: transparent; background-color: #007aff; box-shadow: 0 2px 4px rgba(0, 122, 255, 0.3); background-image: none; transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), background-size 0, background-image 0; animation: ripple_effect 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; background-image: radial-gradient(circle farthest-corner at center, #007aff 10%, transparent 0%); background-size: 0% 0%; }
 
@@ -560,21 +560,21 @@ headerbar entry, headerbar spinbutton, headerbar separator:not(.sidebar), header
 headerbar switch { margin-top: 11px; margin-bottom: 11px; }
 
 /* Close */
-#MozillaGtkWidget.background headerbar button.close, headerbar button.close { color: #b21900; background-color: #ffd2cb; border-radius: 999; }
+#MozillaGtkWidget.background headerbar button.close, headerbar button.close { color: #ff3b1c; background-color: #ebebeb /*#ffd2cb*/; border-radius: 999; }
 
 #MozillaGtkWidget.background headerbar button.close:hover, headerbar button.close:hover { color: #b21900; background-color: #ff3b1c; }
 
 #MozillaGtkWidget.background headerbar button.close:active, headerbar button.close:active { color: #ffffff; background-color: #ff3b1c; box-shadow: 0 2px 4px 0 rgba(255, 59, 28, 0.3); }
 
 /* Minimize */
-#MozillaGtkWidget.background headerbar button.minimize, headerbar button.minimize { color: #987a00; background-color: #fff5cb; border-radius: 999; }
+#MozillaGtkWidget.background headerbar button.minimize, headerbar button.minimize { color: #e4b600; background-color: #ebebeb /*#fff5cb*/; border-radius: 999; }
 
 #MozillaGtkWidget.background headerbar button.minimize:hover, headerbar button.minimize:hover { color: #987a00; background-color: #ffcc00; }
 
 #MozillaGtkWidget.background headerbar button.minimize:active, headerbar button.minimize:active { color: #ffffff; background-color: #ffcc00; box-shadow: 0 2px 4px 0 rgba(255, 204, 0, 0.3); }
 
 /* Maximize */
-#MozillaGtkWidget.background headerbar button.maximize, headerbar button.maximize { color: #1f9332; background-color: #d4f6da; border-radius: 999; }
+#MozillaGtkWidget.background headerbar button.maximize, headerbar button.maximize { color: #4cd964; background-color: #ebebeb /*#d4f6da*/; border-radius: 999; }
 
 #MozillaGtkWidget.background headerbar button.maximize:hover, headerbar button.maximize:hover { color: #1f9332; background-color: #4cd964; }
 
@@ -699,7 +699,7 @@ menubar, .menubar { -GtkWidget-window-dragging: true; padding: 0px; }
 
 menubar:backdrop, .menubar:backdrop { background-color: #ffffff; }
 
-menubar > menuitem, .menubar > menuitem { min-height: 16px; padding: 4px 8px; }
+menubar > menuitem, .menubar > menuitem { min-height: 8px; padding: 4px 8px;}
 
 menubar > menuitem:hover, .menubar > menuitem:hover { box-shadow: inset 0 -3px #007aff; color: #007aff; }
 
@@ -711,7 +711,7 @@ menu, .menu, .context-menu { margin: 4px; padding: 3px 0px; background-color: #f
 
 menu:backdrop, .menu:backdrop, .context-menu:backdrop { background-color: #ffffff; }
 
-menu menuitem, .menu menuitem, .context-menu menuitem { min-height: 16px; min-width: 40px; padding: 6px; }
+menu menuitem, .menu menuitem, .context-menu menuitem { min-height: 8px; min-width: 40px; padding: 5px; }
 
 menu menuitem:hover, .menu menuitem:hover, .context-menu menuitem:hover { color: #ffffff; background-color: #007aff; }
 
@@ -1316,7 +1316,7 @@ list:backdrop { border-color: #e6e6e6; }
 
 list row { padding: 2px; }
 
-list separator.horizontal { margin: 0 8px; }
+list separator.horizontal { margin: 0px 8px; }
 
 list separator.vertical { margin: 8px 0; }
 
@@ -1419,7 +1419,7 @@ stacksidebar row > label { padding-left: 6px; padding-right: 6px; }
 
 stacksidebar row.needs-attention > label { background-size: 6px 6px, 0 0; }
 
-separator.sidebar { background-color: #e0e0e0; }
+separator.sidebar { background-color: background-color: #e0e0e0; }
 
 separator.sidebar:backdrop { background-color: #e6e6e6; }
 
@@ -1430,7 +1430,11 @@ row image.sidebar-icon { opacity: 0.8; }
 
 placessidebar > viewport.frame { border-style: none; }
 
-placessidebar row { min-height: 36px; padding: 0px; }
+placessidebar row { min-height: 36px; padding: 0px; border-bottom: 0.5px solid shade(#f0f0f0, 0.9); margin: 0px 0px;}
+
+placessidebar list separator.horizontal { margin: 8px 8px; color: transparent; background-color: transparent; }
+
+placessidebar list { padding: 0px; }
 
 placessidebar row > revealer { padding: 0 14px; }
 
